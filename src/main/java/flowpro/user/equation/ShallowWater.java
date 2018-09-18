@@ -111,6 +111,10 @@ public class ShallowWater implements Equation {
     }
 
     @Override
+    public void setState(double dt, double t) {  
+    }
+    
+    @Override
     public double[] constInitCondition() {
         if (isInletSupersonic) {
             return WIn;
