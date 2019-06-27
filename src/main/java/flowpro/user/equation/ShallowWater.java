@@ -126,16 +126,6 @@ public class ShallowWater implements Equation {
         }
     }
 
-    @Override
-    public void limitUnphysicalValues(double[] Ws, double[] W, int nBasis) { // limituje zaporne hodnoty
-        if (Ws[0] < hTol) {
-            Arrays.fill(W,0);
-            for (int j = 0; j < nBasis; j++) {
-                W[j] = hTol;
-            }
-        }
-    }
-
     //  nevazky tok stenou _____________________________________________________
     @Override
     public double[] numericalConvectiveFlux(double WL[], double WR[], double[] n, int TT, ElementData elem) {
