@@ -266,6 +266,11 @@ public class ShallowWater implements Equation {
     }
 
     @Override
+	public double[] normalStress(double[] W, double[] dW, double[] normal) {	
+		throw new UnsupportedOperationException("normal stress is not present");
+	}
+    
+    @Override
     public double maxEigenvalue(double[] W, ElementData elem) {
         limite(W);
         double a = Math.sqrt(gravityAcceleration * W[0]);
