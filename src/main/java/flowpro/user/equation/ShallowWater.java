@@ -266,7 +266,7 @@ public class ShallowWater implements Equation {
     }
 
     @Override
-	public double[] normalStress(double[] W, double[] dW, double[] normal) {	
+	public double[] stressVector(double[] W, double[] dW, double[] normal) {	
 		throw new UnsupportedOperationException("normal stress is not present");
 	}
     
